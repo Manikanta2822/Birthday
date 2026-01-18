@@ -1,0 +1,95 @@
+.wish-container {
+  min-height: 100vh;
+  background: url('..\assets\wish-bg.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Greeting card */
+.wish-card {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  padding: 3rem;
+  border-radius: 24px;
+  text-align: center;
+  color: #fff;
+  max-width: 420px;
+  z-index: 2;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.wish-card h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.wish-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.wish-card h3 {
+  font-weight: 600;
+}
+
+/* Bubble animation */
+.bubbles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.bubbles span {
+  position: absolute;
+  bottom: -50px;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  animation: rise 10s infinite ease-in;
+}
+
+/* Random sizes & positions */
+.bubbles span:nth-child(odd) {
+  width: 14px;
+  height: 14px;
+  animation-duration: 8s;
+}
+
+.bubbles span:nth-child(even) {
+  width: 22px;
+  height: 22px;
+  animation-duration: 12s;
+}
+
+.bubbles span:nth-child(n) {
+  left: calc(100% * var(--i));
+}
+
+/* Keyframes */
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Assign random horizontal positions */
+.bubbles span {
+  left: calc(100% * (random));
+}
