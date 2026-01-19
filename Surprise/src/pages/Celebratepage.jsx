@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 
 // 🔹 Image list (same index = same year)
 const images = Array.from({ length: 21 }, (_, i) =>
-  `/src/assets/photos/${i + 1}.jpg`
+  `/photos/${i + 1}.jpg`
 )
 
 export default function Celebratepage() {

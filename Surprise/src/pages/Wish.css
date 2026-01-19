@@ -1,6 +1,6 @@
 .wish-container {
   min-height: 100vh;
-  background: url('..\assets\wish-bg.png') center/cover no-repeat;
+  background: url('/photos/wish-bg.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
