@@ -21,9 +21,7 @@ export default function Celebratepage() {
   return (
     <div
       className="min-vh-100 d-flex align-items-center justify-content-center"
-      style={{
-        background: 'linear-gradient(135deg, #667eea, #f797a7)',
-      }}
+      style={backgroundstyle}
     >
       {/* Wrapper for 3 cards */}
       <div className="d-flex align-items-center gap-4">
@@ -45,7 +43,7 @@ export default function Celebratepage() {
 
         {/* CENTER CARD */}
         <div className="card border-0 text-center p-5" style={glassCardStyle}>
-          <h2 className="fw-bold mb-4 text-white">
+          <h2 className="fw-bold mb-4 text-dark">
             🎂 Happy birthday dear 🎉
           </h2>
 
@@ -58,7 +56,7 @@ export default function Celebratepage() {
             </span>
           </div>
 
-          <p className="text-white mb-4 fs-5">
+          <p className="text-dark mb-4 fs-5">
             Each year reminds us a beautiful memory ✨
           </p>
 
@@ -123,4 +121,13 @@ const buttonStyle = {
   color: '#1f2933',
   boxShadow: '0 10px 25px rgba(0, 201, 255, 0.4)',
   transition: 'all 0.3s ease',
+}
+
+const backgroundstyle={
+   minHeight: '100vh',
+  backgroundImage: "url('/photos/home-background.png')",
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  
 }

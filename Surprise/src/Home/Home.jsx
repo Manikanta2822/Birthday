@@ -7,9 +7,7 @@ export default function Home() {
   return (
     <div
       className="min-vh-100 d-flex align-items-center justify-content-center"
-      style={{
-        background: 'linear-gradient(135deg, #c77dff, #ffafcc)',
-      }}
+      style={HomeContainer}
     >
       <div
         className="card border-0 text-center p-5"
@@ -36,7 +34,7 @@ export default function Home() {
               fontSize: '2.8rem',   // ⬅ slightly bigger heading
             }}
           >
-            🎉 Happy Birthday 🎂
+            🎉 Many More Happy Returns Of The Day Ra Potti🎂
           </h1>
 
           <p
@@ -68,10 +66,20 @@ export default function Home() {
               e.target.style.transform = 'scale(1)'
             }}
           >
-            Celebrate 💖
+            lets Celebrate 💖
           </button>
         </div>
       </div>
     </div>
   )
+}
+
+/* background styles */
+const HomeContainer=
+{
+   minHeight: '100vh',
+  backgroundImage: "url('/photos/home-background.png')",
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
 }
